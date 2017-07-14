@@ -25,8 +25,10 @@ FullSimplify[
 cylindrical functions D of order -1-En and En.*)
 
 d[x_] := ParabolicCylinderD[En, Sqrt[2] x]
-d'[x]/d[x] /. x -> 1 // FullSimplify // TraditionalForm
+d'[x]/d[x] /. x -> 1 // FullSimplify // TraditionalForm 
+(*The above part simplifies hermite polynomial as 1-[H_(En+1) (1)]/[H_(En) (1)]*)
 HermiteH[En + 1, 0]/HermiteH[En, 0] // FullSimplify // TraditionalForm
+(*This simplies even more and gives an expression in terms of a gamma function*)
 
 (*Approximate plots of Even and odd parity*)
 Plot[{ArcTan[(HermiteH[x + 1, 1]/HermiteH[x, 1])], 
