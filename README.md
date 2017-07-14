@@ -22,3 +22,5 @@ Finally, the selected eigen functions (1st and 3rd) are plotted as:
   <img src="http://i.imgur.com/s7jdRsd.png"/>
  </p>
 
+
+License: GNU GPL v3.0 or later on your opinion.
