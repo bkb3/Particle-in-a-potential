@@ -13,7 +13,7 @@ V[x_] := Piecewise[{{(1/2) m0 \[Omega]^2 (Abs[x] - x0)^2,
 Plot[V[x], {x, -5, 5}, PlotRange -> Automatic, 
  PlotLegends -> "Expressions"]
  
- (*The above gives a graph which is symmetric along y-axis*)
+ (*The above code gives a graph which is symmetric along y-axis*)
  
  s = DSolve[{-(1/2) \[CapitalPsi]''[x] + (1/2) (x^2 - 1) \[CapitalPsi][
         x] == En \[CapitalPsi][x]}, \[CapitalPsi][x], x];
@@ -45,4 +45,5 @@ eigen = soln /. Rule[_, x_] -> x // Flatten ;(*Odd eigen value*)
 Sort[eigen];
 Plot[Evaluate@{Table[Re[swe[En][x]], {En, eigen}]}, {x, 0, 4}, 
  PlotRange -> Automatic]
-Print[ TimeUsed[] "secs was used to compute the results."] (*You can omit this line. I use it because of my ancient celeron laptop*)
+Print[ TimeUsed[] "secs was used to compute the results."] 
+(*You can omit the above Print[] line. I use it because of my ancient celeron laptop*)
