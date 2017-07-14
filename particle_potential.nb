@@ -1,1 +1,25 @@
+(*Mathematica 9.0*)
+Clear["Global`*"];
+SaveDefinitions -> True;
 
+(*Mathematica doesn't like constants while plotting so we let \
+unnecessary constants to be 1. This will not affect the analytical \
+solution.*)
+
+\[HBar] = e = x0 = m0 = 1.;
+\[Omega] = 1;
+V[x_] := Piecewise[{{(1/2) m0 \[Omega]^2 (Abs[x] - x0)^2, 
+     Abs[x] >= x0}, {0, Abs[x] <= x0}}];
+Plot[V[x], {x, -5, 5}, PlotRange -> Automatic, 
+ PlotLegends -> "Expressions"]
+ 
+ (*The above gives a graph which is symmetric along y-axis*)
+ 
+ s = DSolve[{-(1/2) \[CapitalPsi]''[x] + (1/2) (x^2 - 1) \[CapitalPsi][
+        x] == En \[CapitalPsi][x]}, \[CapitalPsi][x], x];
+Flatten[s] // TraditionalForm 
+FullSimplify[
+   Series[\[CapitalPsi][x] /. s /. C[1] -> 1 /. C[2] -> 1, {x, 
+     Infinity, 0}]]]
+(*This will give the solutions as linear combinations of parabolic \
+cylindrical functions D of order -1-En and En.*)
