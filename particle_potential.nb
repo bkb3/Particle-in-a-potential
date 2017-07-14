@@ -45,4 +45,4 @@ eigen = soln /. Rule[_, x_] -> x // Flatten ;(*Odd eigen value*)
 Sort[eigen];
 Plot[Evaluate@{Table[Re[swe[En][x]], {En, eigen}]}, {x, 0, 4}, 
  PlotRange -> Automatic]
-Print[ TimeUsed[] "secs was used to compute the results."]
+Print[ TimeUsed[] "secs was used to compute the results."] (*You can omit this line. I use it because of my ancient celeron laptop*)
