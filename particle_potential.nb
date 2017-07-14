@@ -23,3 +23,24 @@ FullSimplify[
      Infinity, 0}]]]
 (*This will give the solutions as linear combinations of parabolic \
 cylindrical functions D of order -1-En and En.*)
+
+d[x_] := ParabolicCylinderD[En, Sqrt[2] x]
+d'[x]/d[x] /. x -> 1 // FullSimplify // TraditionalForm
+HermiteH[En + 1, 0]/HermiteH[En, 0] // FullSimplify // TraditionalForm
+
+(*Approximate plots of Even and odd parity*)
+Plot[{ArcTan[(HermiteH[x + 1, 1]/HermiteH[x, 1])], 
+  ArcTan[(HermiteH[x + 1, 0]/HermiteH[x, 0]) + 1]}, {x, 0, 10}, 
+ PlotStyle -> {Thick, Dashed}, PlotLegends -> {"Odd", "Even"}]
+ 
+ (*The code below plots odd and even parity wave functions*)
+ swe = ParametricNDSolveValue[{-(1/2) \[CapitalPsi]''[
+        x] + (1/2) (x^2 - 1) \[CapitalPsi][x] == 
+     En \[CapitalPsi][x], \[CapitalPsi][0.] == 
+     0., \[CapitalPsi][1.] == 1.}, \[CapitalPsi], {x, -10, 10}, {En}];
+soln = Quiet@Map[FindRoot[swe[En][1], {En, #}] &, {1, 3}] ;
+eigen = soln /. Rule[_, x_] -> x // Flatten ;(*Odd eigen value*)
+Sort[eigen];
+Plot[Evaluate@{Table[Re[swe[En][x]], {En, eigen}]}, {x, 0, 4}, 
+ PlotRange -> Automatic]
+Print[ TimeUsed[] "secs was used to compute the results."]
