@@ -3,13 +3,22 @@ A "classical" problem in quantum mechanics which every student faces. Here we fi
 
 
 The specfic problem we are dealing with here is 
-![img](http://imgur.com/eUIYwFT)
+<p align="center">
+  <img src="http://imgur.com/eUIYwFT"/>
+ </p>
 
 The potential is symmetric under y axis as shown in the graph below obtained by running the mathematica code:
-![img](http://imgur.com/x9XJGyt)
+<p align="center">
+  <img src="http://imgur.com/x9XJGyt"/>
+ </p>
 
 The odd and even parity hermite polynomials are 
-![img](http://imgur.com/CNWa09g)
+<p align="center">
+  <img src="http://imgur.com/CNWa09g"/>
+ </p>
 
 Finally, the selected eigen functions (1st and 3rd) are plotted as:
-![img](http://imgur.com/s7jdRsd)
+<p align="center">
+  <img src="http://imgur.com/s7jdRsd"/>
+ </p>
+
