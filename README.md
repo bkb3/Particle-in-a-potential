@@ -23,4 +23,8 @@ Finally, the selected eigen functions (1st and 3rd) are plotted as:
  </p>
 
 
-License: GNU GPL v3.0 or later on your opinion.
+# TO DO
+  - calculate energies in tabular form
+  
+# License
+  - GNU GPL v3.0 or later on your opinion.
