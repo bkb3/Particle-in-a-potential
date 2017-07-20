@@ -11,13 +11,14 @@ The potential is symmetric under y axis as shown in the graph below obtained by 
 <p align="center">
   <img src="http://i.imgur.com/x9XJGyt.png"/>
  </p>
-
+So we will look for solutions that are parity eigenstates. Solving Schrodinger wave equation (SWE) for x>=x0 we get a combination of parabolic cylindrical functions. (Shown in mathematica code)
+Matchig boundry conditions and a bit of simplification we get some useful expressions in terms of Hermite functions. (Shown in code)
 The odd and even parity hermite polynomials are 
 <p align="center">
   <img src="http://i.imgur.com/CNWa09g.png"/>
  </p>
 
-Finally, the selected eigen functions (1st and 3rd) are plotted as:
+Finally, we can plot the wave functions after finding appropriate coefficients of the solution wave functions/eigen functions of SWE. the selected eigen functions (1st and 3rd) are plotted as:
 <p align="center">
   <img src="http://i.imgur.com/s7jdRsd.png"/>
  </p>
