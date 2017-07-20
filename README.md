@@ -11,8 +11,9 @@ The potential is symmetric under y axis as shown in the graph below obtained by 
 <p align="center">
   <img src="http://i.imgur.com/x9XJGyt.png"/>
  </p>
-So we will look for solutions that are parity eigenstates. Solving Schrodinger wave equation (SWE) for x>=x0 we get a combination of parabolic cylindrical functions. (Shown in mathematica code)
-Matchig boundry conditions and a bit of simplification we get some useful expressions in terms of Hermite functions. (Shown in code)
+So we will look for solutions that are parity eigenstates. Solving Schrodinger wave equation (SWE) for x>=x0 we get a combination of parabolic cylindrical functions (Shown in mathematica code in traditional form for textbook like looks!).
+
+Matching appropriate boundary conditions and a bit of simplification we get some useful expressions in terms of Hermite functions. (Shown in code)
 The odd and even parity hermite polynomials are 
 <p align="center">
   <img src="http://i.imgur.com/CNWa09g.png"/>
