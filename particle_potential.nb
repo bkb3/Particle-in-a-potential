@@ -2,9 +2,7 @@
 Clear["Global`*"];
 SaveDefinitions -> True;
 
-(*Mathematica doesn't like constants while plotting so we let \
-unnecessary constants to be 1. This will not affect the analytical \
-solution.*)
+(*Mathematica doesn't like constants while plotting so we let unnecessary constants to be 1. This will not affect the analytical solution.*)
 
 \[HBar] = e = x0 = m0 = 1.;
 \[Omega] = 1;
@@ -21,8 +19,7 @@ Flatten[s] // TraditionalForm
 FullSimplify[
    Series[\[CapitalPsi][x] /. s /. C[1] -> 1 /. C[2] -> 1, {x, 
      Infinity, 0}]]]
-(*This will give the solutions as linear combinations of parabolic \
-cylindrical functions D of order -1-En and En.*)
+(*This will give the solutions as linear combinations of parabolic cylindrical functions D of order -1-En and En.*)
 
 d[x_] := ParabolicCylinderD[En, Sqrt[2] x]
 d'[x]/d[x] /. x -> 1 // FullSimplify // TraditionalForm 
